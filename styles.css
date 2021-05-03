@@ -1,0 +1,462 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #00252e;
+  font: 18px 'Open Sans', sans-serif;
+}
+
+h1 {
+  font: 3rem 'Poppins', sans-serif;
+}
+
+button {
+  all: unset;
+  border-radius: 50px;
+  font: bold 1rem 'Open Sans', sans-serif;
+  text-align: center;
+}
+
+button:hover, button:focus {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+/***** Header *****/
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem auto 4rem;
+  padding: 0 5rem;
+}
+
+.header button {
+  border: 2px solid #ff8fd8;
+  box-shadow: 2px 2px 10px rgba(255, 143, 216, 0.3);
+  color: #ff8fd8;
+  width: 130px;
+}
+
+/***** CONTAINER TOP *****/
+.top {
+  margin: 10rem auto;
+  padding: 0 9rem;
+  text-align: center;
+}
+
+.content-top p {
+  margin: 1rem auto;
+  width: 50%;
+}
+
+.btn-cta {
+  background-color: #ff52bf;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-size: 18px;
+  margin: 2rem auto;
+  padding: 20px;
+  width: 300px;
+}
+
+.image-top {
+  margin: 4rem auto 5rem;
+  width: 90%;
+}
+
+.image-top img {
+  width: 100%;
+}
+
+.left img, .right img {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.left h1, .right h1 {
+  font-size: 4.5rem;
+}
+
+.left p, .right p {
+  color: #808d99;
+}
+
+.data-top {
+  display: flex;
+  justify-content: space-around;
+}
+
+/***** CONTAINER MIDDLE *****/
+.middle>div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7rem;
+}
+
+.middle>div:last-child {
+  display: block;
+  text-align: center;
+}
+
+.text {
+  width: 52.5%;
+}
+
+.text p {
+  margin: 1rem auto;
+}
+
+.image {
+  width: 40%;
+}
+
+.image img {
+  width: 100%;
+}
+
+.grow-together, .users {
+  background-color: #F6FBFF;
+  margin: 20rem auto;
+  position: relative;
+}
+
+.flowing {
+  flex-direction: row-reverse;
+}
+
+.grow-together::before, .users::before {
+  background: url("images/bg-section-top-desktop-1.svg") no-repeat;
+  content: "";
+  height: 165px;
+  left: 0;
+  position: absolute;
+  top: -164px;
+  width: 100%;
+}
+
+.grow-together::after, .users::after {
+  background: url("images/bg-section-bottom-desktop-1.svg") no-repeat;
+  bottom: -165px;
+  content: "";
+  height: 165px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.cta button {
+  margin-top: 3rem;
+}
+
+/***** CONTAINER BOTTOM *****/
+.bottom {
+  background-color: #00252e;
+  color: #fff;
+  margin-top: 20rem;
+  padding: 5rem 7rem;
+  position: relative;
+}
+
+.bottom::before {
+  background: url("images/bg-footer-top-desktop.svg") no-repeat;
+  content: "";
+  height: 158px;
+  left: 0;
+  position: absolute;
+  top: -156px;
+  width: 100%;
+}
+
+.upper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.content-footer {
+  margin: 1.5rem 0 !important;
+  width: 67.5%;
+}
+
+.huddle p, .newsletter p {
+  margin-top: 1rem;
+}
+
+.phone::before {
+  content: url("images/icon-phone.svg");
+  margin-right: 1rem;
+}
+
+.email::before {
+  content: url("images/icon-email.svg");
+  margin-right: 1rem;
+}
+
+input {
+  border: 0;
+  border-radius: 5px;
+  color: #00252e;
+  font: 16px 'Open Sans', sans-serif;
+  height: 2.5rem;
+  margin-right: 2rem;
+  padding-left: 1rem;
+  width: 60%;
+}
+
+form button {
+  background-color: #ff52bf;
+  border-radius: 5px;
+  height: 2.5rem;
+  width: 25%;
+}
+
+.active {
+  position: relative;
+}
+
+.active::after {
+  bottom: -1.5rem;
+  color: #ff4242;
+  content: "Check your email please";
+  font: 12px 'Open Sans', sans-serif;
+  left: 0;
+  position: absolute;
+}
+
+.active input {
+  border: 1px solid #ff4242;
+  border-radius: 5px;
+}
+
+.social {
+  display: flex;
+  margin: 4rem 0;
+}
+
+.social i {
+  margin-right: 1rem;
+}
+
+.social i:hover {
+  color: #0073cf;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .grow-together::before,
+  .users::before,
+  .grow-together::after,
+  .users::after,
+  .bottom::before {
+    background-size: 100vw auto;
+  }
+
+  .image {
+    width: 45%;
+  }
+
+  .text {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .content-top h1 {
+    margin: auto;
+    width: 90%;
+  }
+
+  .content-top p {
+    width: 60%;
+  }
+
+  .image {
+    width: 45%;
+  }
+
+  .text {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+  /***** CONTAINER TOP*****/
+  .top {
+    padding: 0 6rem;
+  }
+
+  .content-top h1 {
+    width: 80%;
+  }
+
+  .content-top p {
+    width: 75%;
+  }
+
+  .image-top {
+    width: 100%;
+  }
+
+  .data-top {
+    justify-content: space-between;
+  }
+
+  /***** CONTAINER MIDDLE *****/
+  .middle>div {
+    flex-direction: column-reverse;
+  }
+
+  .text, .image {
+    width: 100%;
+  }
+
+  .image {
+    margin-bottom: 7rem;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  /***** CONTAINER BOTTOM *****/
+  .upper {
+    flex-direction: column-reverse;
+  }
+
+  .newsletter {
+    margin-bottom: 10rem;
+  }
+
+  .content-footer {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font: 2rem 'Poppins', sans-serif;
+  }
+
+  .header img {
+    height: 2rem;
+  }
+
+  .content-top h1 {
+    font-size: 2rem;
+  }
+
+  .content-top p {
+    width: 90%;
+  }
+
+  .header, .top, .middle>div {
+    padding: 0 3rem;
+  }
+
+  .data-top {
+    flex-direction: column;
+  }
+
+  .data-top .left, .data-top .right {
+    margin: auto;
+    width: 60%;
+  }
+
+  .data-top .left {
+    margin-bottom: 10rem;
+  }
+
+  .bottom {
+    padding: 5rem 3rem;
+  }
+
+  .content-footer {
+    min-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    font: 16px 'Open Sans', sans-serif;
+  }
+
+  .content-top h1, .cta h1 {
+    font-size: 1.8rem;
+  }
+
+  .header {
+    padding: 0 2rem;
+  }
+
+  .header img {
+    height: 1.8rem;
+  }
+
+  .data-top .left, .data-top .right {
+    width: 75%;
+  }
+
+  .left h1, .right h1 {
+    font-size: 3rem;
+  }
+
+  .top, .middle>div {
+    padding: 0 2rem;
+  }
+
+  .bottom {
+    padding: 5rem 2rem;
+  }
+
+  .huddle img {
+    height: 1.8rem;
+  }
+
+  .content-footer {
+    min-width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  form button {
+    align-self: flex-end;
+    margin-top: 1.2rem;
+    width: 50%;
+  }
+
+  .header button {
+    font-size: 12px;
+    width: 100px;
+  }
+
+  .btn-cta {
+    font-size: 14px;
+    margin: 2rem auto;
+    padding: 15px;
+    width: 200px;
+  }
+
+  .active::after {
+    bottom: 2.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 375px) {
+  .header{
+    padding: 0 1rem;
+  }
+}
